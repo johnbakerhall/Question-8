@@ -87,7 +87,10 @@ class Department:
     def __init__(self,dept_name, dept_code):
         self.dept_name = dept_name
         self.dept_code = dept_code
-        self.courses = []   
+        self.courses = [] 
+
+    def add_course():
+        pass  
 
     def __str__(self):
         return f"deptname: {self.dept_name} has the following courses  {self.courses}"
