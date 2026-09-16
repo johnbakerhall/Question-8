@@ -83,7 +83,7 @@ if __name__ == "__main__":
     student3 = Student("S003", "john")
 
     # Create a course with room for two students.
-    course1 = Course("CSE101", "Introduction to Data Science", 2)
+    course1 = Course("BSDS101", "Introduction to Data Science", 2)
 
     # Test successful, duplicate, and full-course enrollment.
     course1.enroll_student(student1)  # Should succeed
