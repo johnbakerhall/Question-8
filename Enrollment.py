@@ -90,8 +90,9 @@ if __name__ == "__main__":
     # Create a course with a capacity of 2
     course1 = Course("CSE101", "Introduction to Computer Science", 2)
 
-    # Enroll students in the course
+        # Enroll students in the course
     course1.enroll_student(student1)  # Should succeed
+    course1.enroll_student(student1)  # Should fail (duplicate enrollment)
     course1.enroll_student(student2)  # Should succeed
     course1.enroll_student(student3)  # Should fail (course full)
 
