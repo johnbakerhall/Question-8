@@ -5,10 +5,12 @@ Group Project - Scalable OOP System (Topic 5 foundation)
 GROUP 8 - Course Enrolment System
 
 Group members:
-    - [Name 1]
-    - [Name 2]
-    - [Name 3]
-    - [Name 4]
+    Lewis
+    Ann
+    Wilson
+    Baker
+    Favour Cynthia
+    Arthur
 
 Scenario:
 A department runs courses that only have a limited number of places.
