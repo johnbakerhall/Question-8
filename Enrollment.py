@@ -1,4 +1,4 @@
-
+#Cynthia Favour Kirabo , Wilson Mubbale , Kasujja John Baker , Apio Lewis Ruth , Ann Nakamatte , Mugoya Arthur
 class Student:
     # A student is identified by a registration number and name.
     # Each student keeps track of the courses they are enrolled in.
