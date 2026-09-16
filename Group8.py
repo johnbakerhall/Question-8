@@ -70,3 +70,28 @@ class Course:
                 f"Capacity: {len(self.enrolled_students)}/{self.max_capacity}\n"
                 f"Enrolled Students: {enrolled_names if enrolled_names else 'None'}")
 
+
+# Example usage of the classes
+if __name__ == "__main__":
+    # Create some students
+    student1 = Student("S001", "Alice")
+    student2 = Student("S002", "Bob")
+    student3 = Student("S003", "Charlie")
+
+    # Create a course with a capacity of 2
+    course1 = Course("CSE101", "Introduction to Computer Science", 2)
+
+    # Enroll students in the course
+    course1.enroll_student(student1)  # Should succeed
+    course1.enroll_student(student2)  # Should succeed
+    course1.enroll_student(student3)  # Should fail (course full)
+
+    # Print course details
+    print(course1)
+
+    # Drop a student and try enrolling again
+    course1.drop_student(student1)  # Should succeed
+    course1.enroll_student(student3)  # Should succeed now
+
+    # Print updated course details
+    print(course1)
