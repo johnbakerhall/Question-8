@@ -11,11 +11,10 @@ class Student:
         # Display the student's identity in a readable format.
         return f"Student ID: {self.reg_no}\n Student name: {self.name}"
 
-    def enrolleled_courses(self):
-        for course in self.courses:
-            print(f"{course.course_code}: {course.title}")  
+    def enrolled_courses(self):
         # Return the list of courses the student is currently taking.
         return self.courses
+
 
 
 class Course:
