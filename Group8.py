@@ -18,6 +18,8 @@ class Student:
         return f"Student ID: {self.reg_no}\n Student name: {self.name}"
 
     def enrolleled_courses(self):
+        for course in self.courses:
+            print(f"{course.course_code}: {course.title}")  
         # Return the list of courses the student is currently taking.
         return self.courses
 
