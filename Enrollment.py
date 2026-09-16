@@ -24,7 +24,7 @@ class Course:
         self.enrolled_students = []
 
     def enroll_student(self, student):
-        # Prevent duplicate enrollment.
+        # Check if the student is already enrolled.
         if student in self.enrolled_students:
             print(f"Enrollment failed: Student {student.name} is already enrolled in {self.course_code}.")
             return False
