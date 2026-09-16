@@ -68,11 +68,12 @@ class Course:
                 f"Enrolled Students: {enrolled_names if enrolled_names else 'None'}")
 # Group courses by department.
 class Department:
+    # A department has a name, code and list of courses.
     def __init__(self,dept_name, dept_code):
         self.dept_name = dept_name
         self.dept_code = dept_code
         self.courses = []   
-
+        
     def __str__(self):
         return f"deptname: {self.dept_name} has the following courses  {self.courses}"
 # Demonstrate the enrollment workflow.
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     # Create sample students.
     student1 = Student("S001", "wilson")
     student2 = Student("S002", "baker")
-    student3 = Student("S003", "john")
+    student3 = Student("S003", "ruth")
 
     # Create a course with room for two students.
     course1 = Course("BSDS101", "Introduction to Data Science", 2)
