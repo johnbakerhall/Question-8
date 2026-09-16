@@ -1,5 +1,13 @@
-# Group members: Cynthia Favour Kirabo, Wilson Mubbale, Kasujja John Baker,
-# Apio Lewis Ruth, Ann Nakamatte, and Mugoya Arthur.
+''' Group members:
+
+ 1- Cynthia Favour Kirabo
+ 2- Wilson Mubbale
+ 3- Kasujja John Baker
+ 4- Apio Lewis Ruth
+ 5- Ann Nakamattes
+ 6- Mugoya Arthur
+ 
+ '''
 class Student:
     # A student is identified by a registration number and name.
     # Each student keeps track of the courses they are enrolled in.
