@@ -71,8 +71,15 @@ class Course:
                 f"Title: {self.title}\n"
                 f"Capacity: {len(self.enrolled_students)}/{self.max_capacity}\n"
                 f"Enrolled Students: {enrolled_names if enrolled_names else 'None'}")
+#adding a department class to the code
+class Department:
+    def __init__(self,dept_name, dept_code):
+        self.dept_name = dept_name
+        self.dept_code = dept_code
+        self.courses = []   
 
-
+    def __str__(self):
+        return f"deptname: {self.dept_name} has the following courses  {self.courses}"
 # Example usage of the classes
 if __name__ == "__main__":
     # Create some students
