@@ -10,6 +10,9 @@ A demonstration should create a course with a small capacity, enrol several stud
 
 This project is a small object-oriented course enrollment system written in Python. The implementation is in [Enrollment.py](Enrollment.py) and models students and courses as separate objects.
 
+## repo link
+https://github.com/johnbakerhall/Question-8.git
+
 ### Features
 
 - Stores a student's registration number, name, and current courses.
