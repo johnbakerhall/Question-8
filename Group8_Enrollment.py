@@ -4,7 +4,7 @@
  2- Wilson Mubbale
  3- Kasujja John Baker
  4- Apio Lewis Ruth
- 5- Ann Nakamattes
+ 5- Ann Nakamatte
  6- Mugoya Arthur
  
  '''
