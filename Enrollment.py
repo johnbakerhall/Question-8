@@ -29,7 +29,7 @@ class Course:
             print(f"Enrollment failed: Student {student.name} is already enrolled in {self.course_code}.")
             return False
 
-        # Prevent enrollment when the course has reached capacity.
+        # Check if the course is full.
         if len(self.enrolled_students) >= self.max_capacity:
             print(f"Enrollment failed: Course {self.course_code} is full.")
             return False
