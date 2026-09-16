@@ -27,10 +27,16 @@ class Course:
         self.enrolled_students = []
 
     def enroll_student(self, student):
+        # Refuse enrollment if the student is already in the class.
+        if student in self.enrolled_students:
+            print(f"Enrollment failed: Student {student.name} is already enrolled in {self.course_code}.")
+            return False
+
         # Refuse enrollment if the course is already full.
         if len(self.enrolled_students) >= self.max_capacity:
             print(f"Enrollment failed: Course {self.course_code} is full.")
             return False
+
 
         # Refuse enrollment if the student is already in the class.
         if student in self.enrolled_students:
