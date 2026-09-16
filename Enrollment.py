@@ -89,8 +89,16 @@ class Department:
         self.dept_code = dept_code
         self.courses = [] 
 
-    def add_course():
-        pass  
+
+    def add_course(self, course):
+        # Add a course to the department's list of courses.
+        if course not in self.courses:
+            self.courses.append(course)
+            print(f"Course {course.course_code} added to department {self.dept_name}.")
+            return True
+        else:
+            print(f"Course {course.course_code} is already in department {self.dept_name}.")
+            return False
 
     def __str__(self):
         return f"deptname: {self.dept_name} has the following courses  {self.courses}"
