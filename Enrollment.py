@@ -42,7 +42,7 @@ class Course:
         return True
 
     def drop_student(self, student):
-        # Remove the student from both enrollment lists.
+        # Remove the student from both enrollment lists
         if student in self.enrolled_students:
             self.enrolled_students.remove(student)
             student.courses.remove(self)
