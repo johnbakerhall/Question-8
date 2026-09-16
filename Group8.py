@@ -74,9 +74,9 @@ class Course:
 # Example usage of the classes
 if __name__ == "__main__":
     # Create some students
-    student1 = Student("S001", "Alice")
-    student2 = Student("S002", "Bob")
-    student3 = Student("S003", "Charlie")
+    student1 = Student("S001", "wilson")
+    student2 = Student("S002", "baker")
+    student3 = Student("S003", "john")
 
     # Create a course with a capacity of 2
     course1 = Course("CSE101", "Introduction to Computer Science", 2)
