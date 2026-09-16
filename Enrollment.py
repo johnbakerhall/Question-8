@@ -1,9 +1,3 @@
-"""Course enrollment system for a department.
-
-This program models students and courses, with rules that prevent
-students from enrolling twice or exceeding a course's capacity.
-"""
-
 
 class Student:
     # A student is identified by a registration number and name.
