@@ -36,6 +36,7 @@ class Course:
 
 
         # Keep both sides of the student-course relationship in sync.
+        # Add the student to the course
         self.enrolled_students.append(student)
         student.courses.append(self)
         print(f"Student {student.name} enrolled in {self.course_code}.")
