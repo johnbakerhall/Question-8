@@ -37,11 +37,6 @@ class Course:
             return False
 
 
-        # Refuse enrollment if the student is already in the class.
-        if student in self.enrolled_students:
-            print(f"Enrollment failed: Student {student.name} is already enrolled in {self.course_code}.")
-            return False
-
         # Add the student to the course and record the course for the student.
         self.enrolled_students.append(student)
         student.courses.append(self)
