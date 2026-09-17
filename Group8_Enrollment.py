@@ -8,10 +8,10 @@
  6- Mugoya Arthur
  
  '''
-class Student:
-    # A student is identified by a registration number and name.
+# A student is identified by a registration number and name.
     # Each student keeps track of the courses they are enrolled in.
     # Store the student's identity and current course enrollments.
+class Student:    
     def __init__(self, reg_no, name):
         self.reg_no = reg_no
         self.name = name
