@@ -104,6 +104,7 @@ class Department:
         return f"deptname: {self.dept_name} has the following courses  {self.courses}"
 # Example usage of the classes.
 # Demonstrate the enrollment workflow.
+
 if __name__ == "__main__":
     # Create some students.
     student1 = Student("S001", "wilson")
@@ -112,6 +113,7 @@ if __name__ == "__main__":
 
     # Create a course with a capacity of 2.
     course1 = Course("CSE101", "Introduction to Computer Science", 2)
+    course2 = Course("CSE102", "Data Structures", 3)
 
     # Enroll students in the course.
     course1.enroll_student(student1)  # Should succeed.
