@@ -80,10 +80,10 @@ class Course:
                 f"Title: {self.title}\n"
                 f"Capacity: {len(self.enrolled_students)}/{self.max_capacity}\n"
                 f"Enrolled Students: {enrolled_names if enrolled_names else 'None'}")
-# Adding a department class to the code.
-# Group courses by department.
+#Adding a department class to the code.
+#Group courses by department.
 class Department:
-    # A department has a name, code and list of courses.
+    #A department has a name, code and list of courses.
     def __init__(self,dept_name, dept_code):
         self.dept_name = dept_name
         self.dept_code = dept_code
@@ -91,7 +91,7 @@ class Department:
 
 
     def add_course(self, course):
-        # Add a course to the department's list of courses.
+        #Add a course to the department's list of courses.
         if course not in self.courses:
             self.courses.append(course)
             print(f"Course {course.course_code} added to department {self.dept_name}.")
