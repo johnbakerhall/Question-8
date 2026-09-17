@@ -1,6 +1,6 @@
 ''' Group members:
 
- 1- Cynthia Favour Kirabo
+ 1- Favour Cynthia KIrabo
  2- Wilson Mubbale
  3- Kasujja John Baker
  4- Apio Lewis Ruth
