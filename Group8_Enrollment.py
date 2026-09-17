@@ -107,30 +107,134 @@ class Department:
 
 
 if __name__ == "__main__":
-    # Create some students.
 
-    student1 = Student("S001", "wilson")
-    student2 = Student("S002", "baker")
-    student3 = Student("S003", "john")
+    print("===== STUDENT COURSE ENROLLMENT SYSTEM =====")
 
-    # Create a course with a capacity of 2.
-    course1 = Course("CSE101", "Introduction to Computer Science", 2)
-    course2 = Course("CSE102", "Data Structures", 3)
-    Department1 = Department("Engineering Department", "ES")
-    Department1.add_course(course1)
-    Department1.add_course(course2)
+    # Get student information from the user
+    students = []
 
-    # Enroll students in the course.
-    course1.enroll_student(student1)  # Should succeed.
-    course1.enroll_student(student2)  # Should succeed.
-    course1.enroll_student(student3)  # Should fail (course full).
+    number_of_students = int(input("Enter number of students: "))
 
-    # Print course details.
-    print(course1)
+    for i in range(number_of_students):
+        print(f"\nEnter details for Student {i + 1}")
+        reg_no = input("Registration number: ")
+        name = input("Student name: ")
 
-    # Drop a student and try enrolling again.
-    course1.drop_student(student1)  # Should succeed.
-    course1.enroll_student(student3)  # Should succeed now.
+        student = Student(reg_no, name)
+        students.append(student)
 
-    # Print updated course details.
-    print(course1)
+    # Get course information from the user
+    courses = []
+
+    number_of_courses = int(input("\nEnter number of courses: "))
+
+    for i in range(number_of_courses):
+        print(f"\nEnter details for Course {i + 1}")
+        course_code = input("Course code: ")
+        title = input("Course title: ")
+        max_capacity = int(input("Maximum capacity: "))
+
+        course = Course(course_code, title, max_capacity)
+        courses.append(course)
+
+    # Create a department
+    print("\n===== DEPARTMENT DETAILS =====")
+    dept_name = input("Enter department name: ")
+    dept_code = input("Enter department code: ")
+
+    department = Department(dept_name, dept_code)
+
+    # Add all courses to the department
+    for course in courses:
+        department.add_course(course)
+
+    # Enrollment menu
+    while True:
+        print("\n===== ENROLLMENT MENU =====")
+        print("1. Enroll student")
+        print("2. Drop student")
+        print("3. View course details")
+        print("4. View student's courses")
+        print("5. Exit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            print("\nAvailable Students:")
+
+            for i, student in enumerate(students):
+                print(f"{i + 1}. {student.reg_no} - {student.name}")
+
+            student_choice = int(input("Select student: "))
+
+            print("\nAvailable Courses:")
+
+            for i, course in enumerate(courses):
+                print(
+                    f"{i + 1}. {course.course_code} - "
+                    f"{course.title} "
+                    f"({course.available_places()} places available)"
+                )
+
+            course_choice = int(input("Select course: "))
+
+            student = students[student_choice - 1]
+            course = courses[course_choice - 1]
+
+            course.enroll_student(student)
+
+        elif choice == "2":
+            print("\nStudents:")
+
+            for i, student in enumerate(students):
+                print(f"{i + 1}. {student.reg_no} - {student.name}")
+
+            student_choice = int(input("Select student: "))
+
+            print("\nCourses:")
+
+            for i, course in enumerate(courses):
+                print(f"{i + 1}. {course.course_code} - {course.title}")
+
+            course_choice = int(input("Select course: "))
+
+            student = students[student_choice - 1]
+            course = courses[course_choice - 1]
+
+            course.drop_student(student)
+
+        elif choice == "3":
+            print("\nCourses:")
+
+            for i, course in enumerate(courses):
+                print(f"{i + 1}. {course.course_code} - {course.title}")
+
+            course_choice = int(input("Select course: "))
+
+            course = courses[course_choice - 1]
+
+            print("\n===== COURSE DETAILS =====")
+            print(course)
+
+        elif choice == "4":
+            print("\nStudents:")
+
+            for i, student in enumerate(students):
+                print(f"{i + 1}. {student.reg_no} - {student.name}")
+
+            student_choice = int(input("Select student: "))
+
+            student = students[student_choice - 1]
+
+            print(f"\nCourses enrolled by {student.name}:")
+            student.enrolled_courses()
+
+            if not student.courses:
+                print("No courses enrolled.")
+
+        elif choice == "5":
+            print("Thank you for using the Student Course Enrollment System.")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
