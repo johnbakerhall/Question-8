@@ -18,7 +18,7 @@ class Student:
         self.courses = [] #where the sudents courses will be stored
 
     def __str__(self):
-        # Display the student's identity in a readable format.
+        # Helps to display the student's identity in a readable format.
         return f"Student ID: {self.reg_no}\n Student name: {self.name}"
 
     def enrolled_courses(self):
