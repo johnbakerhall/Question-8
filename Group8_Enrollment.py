@@ -4,14 +4,14 @@
  2- Wilson Mubbale
  3- Kasujja John Baker
  4- Apio Lewis Ruth
- 5- Ann Nakamattes
+ 5- Ann Nakamatte
  6- Mugoya Arthur
  
  '''
-class Student:
-    # A student is identified by a registration number and name.
-    # Each student keeps track of the courses they are enrolled in.
-    # Store the student's identity and current course enrollments.
+# A student is identified by a registration number and name.
+    #Each student keeps track of the courses they are enrolled in.
+    #Store the student's identity and current course enrollments.
+class Student:    
     def __init__(self, reg_no, name):
         self.reg_no = reg_no
         self.name = name
@@ -28,8 +28,8 @@ class Student:
 
 
 class Course:
-    # A course has a code, title, capacity, and a list of enrolled students.
-    # Store course details and the students currently enrolled.
+    #A course has a code, title, capacity, and a list of enrolled students.
+    #Store course details and the students currently enrolled.
     def __init__(self, course_code, title, max_capacity):
         self.course_code = course_code
         self.title = title
@@ -37,14 +37,14 @@ class Course:
         self.enrolled_students = []
 
     def enroll_student(self, student):
-        # Refuse enrollment if the student is already in the class.
-        # Check if the student is already enrolled.
+        #Refuse enrollment if the student is already in the class.
+        #Check if the student is already enrolled.
         if student in self.enrolled_students:
             print(f"Enrollment failed: Student {student.name} is already enrolled in {self.course_code}.")
             return False
 
-        # Refuse enrollment if the course is already full.
-        # Check if the course is full.
+        #Refuse enrollment if the course is already full.
+        #Check if the course is full.
         if self.available_places() <= 0:
             print(f"Enrollment failed: Course {self.course_code} is full.")
             return False
