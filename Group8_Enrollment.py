@@ -103,7 +103,8 @@ class Department:
     def __str__(self):
         return f"deptname: {self.dept_name} has the following courses  {self.courses}"
 # Example usage of the classes.
-# Demonstrate the enrollment workflow.
+# Demonstrate the enrollment workflow from user input
+
 
 if __name__ == "__main__":
     # Create some students.
@@ -114,6 +115,9 @@ if __name__ == "__main__":
     # Create a course with a capacity of 2.
     course1 = Course("CSE101", "Introduction to Computer Science", 2)
     course2 = Course("CSE102", "Data Structures", 3)
+    Department1 = Department("Engineering Department", "ES")
+    Department1.add_course(course1)
+    Department1.add_course(course2)
 
     # Enroll students in the course.
     course1.enroll_student(student1)  # Should succeed.
