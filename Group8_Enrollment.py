@@ -8,7 +8,7 @@
  6- Mugoya Arthur
  
  '''
-# A student is identified by a registration number and name.
+# A student is identified by the registration number and name.
     #Each student keeps track of the courses they are enrolled in.
     #Store the student's identity and current course enrollments.
 class Student:    
