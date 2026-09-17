@@ -15,7 +15,7 @@ class Student:
     def __init__(self, reg_no, name):
         self.reg_no = reg_no
         self.name = name
-        self.courses = []
+        self.courses = [] #where the sudents courses will be stored
 
     def __str__(self):
         # Display the student's identity in a readable format.
