@@ -9,8 +9,8 @@
  
  '''
 # A student is identified by a registration number and name.
-    # Each student keeps track of the courses they are enrolled in.
-    # Store the student's identity and current course enrollments.
+    #Each student keeps track of the courses they are enrolled in.
+    #Store the student's identity and current course enrollments.
 class Student:    
     def __init__(self, reg_no, name):
         self.reg_no = reg_no
@@ -28,8 +28,8 @@ class Student:
 
 
 class Course:
-    # A course has a code, title, capacity, and a list of enrolled students.
-    # Store course details and the students currently enrolled.
+    #A course has a code, title, capacity, and a list of enrolled students.
+    #Store course details and the students currently enrolled.
     def __init__(self, course_code, title, max_capacity):
         self.course_code = course_code
         self.title = title
@@ -43,8 +43,8 @@ class Course:
             print(f"Enrollment failed: Student {student.name} is already enrolled in {self.course_code}.")
             return False
 
-        # Refuse enrollment if the course is already full.
-        # Check if the course is full.
+        #Refuse enrollment if the course is already full.
+        #Check if the course is full.
         if self.available_places() <= 0:
             print(f"Enrollment failed: Course {self.course_code} is full.")
             return False
