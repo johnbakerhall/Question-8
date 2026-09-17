@@ -49,8 +49,8 @@ class Course:
             print(f"Enrollment failed: Course {self.course_code} is full.")
             return False
 
-        # Keep both sides of the student-course relationship in sync.
-        # Add the student to the course.
+        #Keep both sides of the student-course relationship in sync.
+        #Add the student to the course.
         self.enrolled_students.append(student)
         # Add the course to the student's course list.
         student.courses.append(self)
@@ -58,8 +58,8 @@ class Course:
         return True
 
     def drop_student(self, student):
-        # Remove the student only if they are currently enrolled.
-        # Remove the student from both enrollment lists.
+        #Remove the student only if they are currently enrolled.
+        #Remove the student from both enrollment lists.
         if student in self.enrolled_students:
             self.enrolled_students.remove(student)
             student.courses.remove(self)
@@ -70,7 +70,7 @@ class Course:
             return False
 
     def available_places(self):
-        # Calculate how many places are still open in the course.
+        #Calculate how many places are still open in the course.
         return self.max_capacity - len(self.enrolled_students)
 
     def __str__(self):
