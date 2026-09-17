@@ -108,6 +108,7 @@ class Department:
 
 if __name__ == "__main__":
     # Create some students.
+
     student1 = Student("S001", "wilson")
     student2 = Student("S002", "baker")
     student3 = Student("S003", "john")
